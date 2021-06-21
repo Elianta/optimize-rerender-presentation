@@ -1,0 +1,35 @@
+.homePage,
+.example_1,
+.example_2,
+.example_3 {
+  display: grid;
+  grid-gap: 16px;
+}
+
+.example_3 {
+  justify-content: flex-start;
+}
+
+.homePage {
+  padding: 20px;
+}
+
+.homePage_List {
+  display: grid;
+  grid-gap: 10px;
+  padding-left: 20px;
+}
+
+.homePage_Item {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 16px;
+
+  &::before {
+    content: '\22C4';
+    position: absolute;
+    top: 5px;
+    left: -16px;
+  }
+}

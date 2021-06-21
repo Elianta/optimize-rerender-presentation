@@ -1,0 +1,61 @@
+@use '@/assets/styles/vars/scss-variables' as *;
+@use '@/assets/styles/mixins' as *;
+
+.title {
+  display: block;
+  max-width: var(--title-max-width, 100%);
+  margin-bottom: var(--title-mb, 0);
+  font-family: var(--font-main);
+  font-weight: var(--title-fw, bold);
+  text-align: var(--title-align, left);
+  color: var(--title-color, var(--clr-text-main));
+
+  &.center {
+    text-align: var(--title-align, center);
+  }
+
+  &.size-12 {
+    font-size: var(--title-fz, 12px);
+    line-height: var(--title-lh, 1.5);
+  }
+
+  &.size-14 {
+    font-size: var(--title-fz, 14px);
+    line-height: var(--title-lh, 1.43);
+  }
+
+  &.size-16 {
+    font-size: var(--title-fz, 16px);
+    line-height: var(--title-lh, 1.375);
+  }
+
+  &.size-18 {
+    font-size: var(--title-fz, 18px);
+    line-height: var(--title-lh, 1.33);
+  }
+
+  &.size-22 {
+    font-size: var(--title-fz, 22px);
+    line-height: var(--title-lh, 1.727);
+
+    @include maxWidth($bp-lMobile) {
+      font-size: var(--title-fz, 14px);
+      line-height: var(--title-lh, 1.43);
+    }
+  }
+
+  &.size-28 {
+    font-size: var(--title-fz, 28px);
+    line-height: var(--title-lh, 1.286);
+  }
+
+  &.size-38 {
+    font-size: var(--title-fz, 38px);
+    line-height: var(--title-lh, 1.26);
+
+    @include maxWidth($bp-lMobile) {
+      font-size: var(--title-fz, 22px);
+      line-height: var(--title-lh, 1.727);
+    }
+  }
+}

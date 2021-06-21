@@ -1,0 +1,23 @@
+@use '@/assets/styles/vars/scss-variables' as *;
+@use '@/assets/styles/mixins' as *;
+
+.paragraph {
+  white-space: pre-wrap;
+  font-weight: normal;
+  font-size: var(--paragraph-fz, 22px);
+  line-height: var(--paragraph-lh, 1.6);
+  color: var(--paragraph-color, var(--clr-text-main));
+  text-align: var(--paragraph-align, left);
+
+  &:not(:last-child) {
+    margin-bottom: var(--paragraph-mb, 24px);
+  }
+
+  &.center {
+    text-align: var(--paragraph-align, center);
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+}

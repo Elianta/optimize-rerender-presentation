@@ -1,0 +1,42 @@
+@use '@/assets/styles/vars/scss-variables' as *;
+@use '@/assets/styles/mixins' as *;
+
+$max-width: 1160px;
+$max-width-wide: 1420px;
+$min-width: 280px;
+$space-desktop: 135px;
+$space-sDesktop: 60px;
+$space-tablet: 48px;
+$space-mobile: 20px;
+
+.container {
+  min-width: $min-width;
+  width: calc(100% - var(--container-space, #{$space-desktop}) * 2);
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include maxWidth($bp-sDesktop) {
+    width: calc(100% - var(--container-space, #{$space-sDesktop}) * 2);
+  }
+
+  @include maxWidth($bp-tablet) {
+    width: calc(100% - var(--container-space, #{$space-tablet}) * 2);
+  }
+
+  @include maxWidth($bp-lMobile) {
+    width: calc(100% - var(--container-space, #{$space-mobile}) * 2);
+  }
+}
+
+.wide {
+  max-width: $max-width-wide;
+}
+
+.halved {
+  --container-space: #{$space-tablet};
+
+  @include maxWidth($bp-lMobile) {
+    --container-space: #{$space-mobile};
+  }
+}

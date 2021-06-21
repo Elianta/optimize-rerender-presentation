@@ -1,0 +1,34 @@
+@use '@/assets/styles/vars/scss-variables' as *;
+@use '@/assets/styles/mixins' as *;
+
+.text {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  mark {
+    background: 0 0;
+    color: var(--text-mark-color, var(--clr-primary));
+  }
+
+  &.size-10 {
+    font-size: var(--text-fz, 10px);
+    line-height: var(--text-lh, 1.6);
+  }
+
+  &.size-12 {
+    font-size: var(--text-fz, 12px);
+    line-height: var(--text-lh, 1.5);
+  }
+
+  &.size-14 {
+    font-size: var(--text-fz, 14px);
+    line-height: var(--text-lh, 1.43);
+  }
+
+  &.size-16 {
+    font-size: var(--text-fz, 16px);
+    line-height: var(--text-lh, 1.375);
+  }
+}

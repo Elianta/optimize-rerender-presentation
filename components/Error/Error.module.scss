@@ -1,0 +1,64 @@
+@use '@/assets/styles/vars/scss-variables' as *;
+@use '@/assets/styles/mixins' as *;
+
+.error {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+
+  --button-pl: 30px;
+  --button-pr: 30px;
+  --paragraph-mb: 40px;
+
+  @include maxWidth($bp-mTablet) {
+    padding: 56px 0;
+    --title-align: center;
+    --paragraph-align: center;
+  }
+
+  @include maxWidth($bp-lMobile) {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include maxWidth($bp-mTablet) {
+    flex-wrap: wrap;
+  }
+}
+
+.img {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 290px;
+  margin-right: 40px;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 95.36%;
+  }
+
+  @include maxWidth($bp-mTablet) {
+    margin: 0 auto 40px;
+  }
+
+  @include maxWidth($bp-mobile) {
+    max-width: 250px;
+  }
+}
+
+.btn {
+  display: flex;
+
+  @include maxWidth($bp-mTablet) {
+    justify-content: center;
+  }
+}
